@@ -20,7 +20,9 @@ if __name__ == "__main__":
 
     print("Monitoring for screen changes")
     prev_avg = get_screen_colour_avg()
-    while True:
+    ctr = 0
+    while ctr < int(os.getenv('MAX_ATTEMPTS')):
+        ctr += 1
         avg = get_screen_colour_avg()
         if abs(prev_avg - avg) > int(os.getenv('COLOUR_DIFF_THRESHOLD')):
             print("Screen changed!")
@@ -30,4 +32,6 @@ if __name__ == "__main__":
         prev_avg = avg
 
         time.sleep(int(os.getenv('SLEEP_TIME_S')))
+    
+    print(f"Timed out after {os.getenv('MAX_ATTEMPTS')} checks")
 
