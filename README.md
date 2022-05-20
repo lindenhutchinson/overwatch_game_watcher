@@ -29,7 +29,10 @@ The SENDER_EMAIL and RECEIVER_EMAIL can be the same or different
 
 Using a gmail account will require you to disable safe login protection
 
-I created a new account to be used as the sender
+If possible, create a new account to be used as the sender email
+
+
+*storing the encryption key and encrypted password next to each other isn't very secure. It's only a small step up from storing it in plaintext*
 
 ### what it does
 
