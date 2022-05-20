@@ -32,6 +32,7 @@ if __name__ == "__main__":
         prev_avg = avg
 
         time.sleep(int(os.getenv('SLEEP_TIME_S')))
-    
-    print(f"Timed out after {os.getenv('MAX_ATTEMPTS')} checks")
+        
+    if ctr == os.getenv('MAX_ATTEMPTS'):
+        print(f"Timed out after {os.getenv('MAX_ATTEMPTS')} checks")
 
