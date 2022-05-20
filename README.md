@@ -25,8 +25,6 @@ Use the password for your SENDER_EMAIL
 
 Copy the generated values into your .env file
 
-The SENDER_EMAIL and RECEIVER_EMAIL can be the same or different
-
 Using a gmail account will require you to disable safe login protection
 
 If possible, create a new account to be used as the sender email
